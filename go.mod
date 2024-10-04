@@ -1,3 +1,3 @@
-module test
+module run
 
 go 1.18

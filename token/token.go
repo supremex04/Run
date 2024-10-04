@@ -24,6 +24,8 @@ const (
 type TokenType string
 
 type Token struct {
+	// Type variable holds the type of token
 	Type TokenType
+	// Literal variable holds the literal value of token
 	Literal string
 }
