@@ -9,3 +9,4 @@ func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	return l
 }
+
