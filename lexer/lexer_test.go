@@ -7,11 +7,12 @@ import (
 
 func TestNextToken(t *testing.T) {
 	input := `=+(){},;`
-
+	// defines array of anonymous structure,
+	// each struct has two fields expectedType and expectedLiteral
 	tests := []struct {
 		expectedType    token.TokenType
 		expectedLiteral string
-	}{
+	}{	//expectedType   expectedLiteral
 		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
 		{token.LPAREN, "("},
@@ -27,6 +28,7 @@ func TestNextToken(t *testing.T) {
 	for i, tt := range tests {
 		tok := l.NextToken()
 		if tok.Type != tt.expectedType {
+			// %q is used to print string inside " "
 			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q",
 				i, tt.expectedType, tok.Type)
 		}
