@@ -38,7 +38,9 @@ var keywords = map[string]TokenType{
 
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
-	return tok
+		// returns the keyword's TokenType like FUNCTION, LET
+		return tok
 	}
+	// returning IDENT indicates it's just a regular identifier
 	return IDENT
 }

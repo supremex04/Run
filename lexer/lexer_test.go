@@ -17,8 +17,7 @@ func TestNextToken(t *testing.T) {
 	// defines array of anonymous structure,
 	// each struct has two fields expectedType and expectedLiteral
 	tests := []struct {
-		expectedType
-		token.TokenType
+		expectedType token.TokenType
 		expectedLiteral string
 		}{
 		{token.LET, "let"},
@@ -58,9 +57,9 @@ func TestNextToken(t *testing.T) {
 		{token.RPAREN, ")"},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
-	}
+		}
+	
 
-}
 
 
 	l := New(input)
@@ -76,4 +75,5 @@ func TestNextToken(t *testing.T) {
 				i, tt.expectedLiteral, tok.Literal)
 		}
 	}
+
 }
