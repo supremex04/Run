@@ -21,6 +21,7 @@ const (
 	LET = "LET"
 	)
 
+// defining TokenType as a  new type that is based on string type
 type TokenType string
 
 type Token struct {
@@ -28,4 +29,16 @@ type Token struct {
 	Type TokenType
 	// Literal variable holds the literal value of token
 	Literal string
+}
+
+var keywords = map[string]TokenType{
+	"fn": FUNCTION,
+	"let": LET,
+}
+
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+	return tok
+	}
+	return IDENT
 }
