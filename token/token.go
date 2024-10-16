@@ -7,8 +7,12 @@ const (
 	IDENT = "IDENT" // add, foobar, x, y, ...
 	INT = "INT"
 	// Operators
-	ASSIGN= "="
+	ASSIGN = "="
 	PLUS = "+"
+	MINUS = "-"
+	BANG = "!"
+	ASTERISK = "*"
+	SLASH = "/"
 	// Delimiters
 	COMMA = ","
 	SEMICOLON = ";"
@@ -19,6 +23,11 @@ const (
 	// Keywords
 	FUNCTION = "FUNCTION"
 	LET = "LET"
+	// operators
+	
+	LT = "<"
+	GT = ">"
+
 	)
 
 // defining TokenType as a  new type that is based on string type
