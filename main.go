@@ -15,6 +15,6 @@ func main(){
 	}
 
 	fmt.Printf("Hey %s! This is Run programming language!\n", user.Username)
-	fmt.Printf("Type commands here\n")
-	repl.Start(os.Stdin, os.Stdout)
+	fmt.Printf("Type commands here:\n")
+	repl.Start(os.Stdin/*, os.Stdout*/)
 }
