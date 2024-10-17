@@ -13,6 +13,8 @@ const (
 	BANG = "!"
 	ASTERISK = "*"
 	SLASH = "/"
+	LT = "<"
+	GT = ">"
 	// Delimiters
 	COMMA = ","
 	SEMICOLON = ";"
@@ -28,11 +30,9 @@ const (
 	IF= "IF"
 	ELSE= "ELSE"
 	RETURN= "RETURN"
-	// operators
-	
-	LT = "<"
-	GT = ">"
-
+	// double operators
+	EQ = "=="
+	NOT_EQ = "!="
 	)
 
 // defining TokenType as a  new type that is based on string type
