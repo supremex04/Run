@@ -3,10 +3,10 @@ package token
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF = "EOF"
-	// Identifiers + literals
-	IDENT = "IDENT" // add, foobar, x, y, ...
+	// identifiers + literals
+	IDENT = "IDENT" 
 	INT = "INT"
-	// Operators
+	// operators
 	ASSIGN = "="
 	PLUS = "+"
 	MINUS = "-"
@@ -15,14 +15,14 @@ const (
 	SLASH = "/"
 	LT = "<"
 	GT = ">"
-	// Delimiters
+	// delimiters
 	COMMA = ","
 	SEMICOLON = ";"
 	LPAREN = "("
 	RPAREN = ")"
 	LBRACE = "{"
 	RBRACE = "}"
-	// Keywords
+	// keywords
 	FUNCTION = "FUNCTION"
 	LET = "LET"
 	TRUE= "TRUE"
