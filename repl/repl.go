@@ -25,10 +25,10 @@ const PROMPT = ">> "
 
 func Start(in io.Reader /*, out io.Writer*/) {
 	scanner := bufio.NewScanner(in)
+	fmt.Printf(RUN_BANNER)
+	fmt.Printf("\nType commands here:\n")
 
 	for {
-		fmt.Printf(RUN_BANNER)
-		fmt.Printf("\nType commands here:\n")
 		fmt.Printf(PROMPT)
 
 		// The scanner.Scan() method reads the next line from the input,
