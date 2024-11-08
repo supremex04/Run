@@ -1,8 +1,8 @@
 package evaluator
 
 import (
-	"monkey/ast"
-	"monkey/object"
+	"run/ast"
+	"run/object"
 )
 
 func Eval(node ast.Node) object.Object {
