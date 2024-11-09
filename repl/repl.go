@@ -31,7 +31,6 @@ func Start(in io.Reader, out io.Writer) {
 
 	for {
 		fmt.Printf(PROMPT)
-
 		// The scanner.Scan() method reads the next line from the input,
 		//breaking the input into tokens based on newlines
 		// (by default, it uses a newline \n as the delimiter).
@@ -57,6 +56,7 @@ func Start(in io.Reader, out io.Writer) {
 			io.WriteString(out, evaluated.Inspect())
 			io.WriteString(out, "\n")
 		}
+
 	}
 }
 
