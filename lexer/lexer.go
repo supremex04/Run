@@ -1,13 +1,14 @@
 package lexer
+
 import "run/token"
 
-
 type Lexer struct {
-	input string 
-	position int // current position in input (points to current char)
+	input        string
+	position     int  // current position in input (points to current char)
 	readPosition int  // current reading position in input (after current char)
-	ch byte // current char under examination
+	ch           byte // current char under examination
 }
+
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	l.readChar()
@@ -16,9 +17,9 @@ func New(input string) *Lexer {
 
 func (l *Lexer) readChar() {
 	if l.readPosition >= len(l.input) {
-	l.ch = 0
+		l.ch = 0
 	} else {
-	l.ch = l.input[l.readPosition]
+		l.ch = l.input[l.readPosition]
 	}
 	l.position = l.readPosition
 	l.readPosition += 1
@@ -43,7 +44,10 @@ func (l *Lexer) NextToken() token.Token {
 			tok = token.Token{Type: token.NOT_EQ, Literal: string(ch) + string(l.ch)}
 		} else {
 			tok = newToken(token.BANG, l.ch)
-	}
+		}
+	case '"':
+		tok.Type = token.STRING
+		tok.Literal = l.readString()
 	case ';':
 		tok = newToken(token.SEMICOLON, l.ch)
 	case '(':
@@ -93,15 +97,13 @@ func (l *Lexer) NextToken() token.Token {
 func (l *Lexer) readNumber() string {
 	position := l.position
 	for isDigit(l.ch) {
-	l.readChar()
+		l.readChar()
 	}
 	return l.input[position:l.position]
 }
 func isDigit(ch byte) bool {
 	return '0' <= ch && ch <= '9'
 }
-
-
 
 func (l *Lexer) readIdentifier() string {
 	position := l.position
@@ -119,7 +121,8 @@ func (l *Lexer) skipWhitespace() {
 		l.readChar()
 	}
 }
- // similar to readChar but doesn't increase the l.position and l.readPosition
+
+// similar to readChar but doesn't increase the l.position and l.readPosition
 func (l *Lexer) peekChar() byte {
 	if l.readPosition >= len(l.input) {
 		return 0
@@ -131,4 +134,15 @@ func (l *Lexer) peekChar() byte {
 
 func newToken(tokenType token.TokenType, ch byte) token.Token {
 	return token.Token{Type: tokenType, Literal: string(ch)}
+}
+
+func (l *Lexer) readString() string {
+	position := l.position + 1
+	for {
+		l.readChar()
+		if l.ch == '"' || l.ch == 0 {
+			break
+		}
+	}
+	return l.input[position:l.position]
 }
