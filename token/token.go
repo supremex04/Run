@@ -22,6 +22,8 @@ const (
 	RPAREN    = ")"
 	LBRACE    = "{"
 	RBRACE    = "}"
+	LBRACKET  = "["
+	RBRACKET  = "]"
 	// keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
