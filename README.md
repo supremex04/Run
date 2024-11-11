@@ -49,7 +49,7 @@ display( hw[0] + hw[1] );
 ![Snapshot of the interpreter](./screenshot.png)
 
 
-## Acknowledgments
+## Acknowledgment
 
 This project was done by following Thorsten Ball's book on writing interpreters.
 
