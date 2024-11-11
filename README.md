@@ -15,12 +15,17 @@ go run main.go
 
 Built in functions:
 
-```len(): ```To return the lenght of string, array
-first(): To return first element of array
-last(): To return last element of array
-rest(): To display the rest elements
-push(): To append element into the array
-display(): To print on the screen
+```len():```To return the lenght of string, array
+
+```first():```To return first element of array
+
+```last():``` To return last element of array
+
+```rest():``` To display the rest elements
+
+```push():``` To append element into the array
+
+```display():``` To print on the screen
 
 
 Sample code to run:
