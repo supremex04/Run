@@ -28,6 +28,7 @@ func TestNextToken(t *testing.T) {
 	"test"
 	"test run"
 	[9, 9];
+	{"test": "run"}
 	`
 	// defines array of anonymous structure,
 	// each struct has two fields expectedType and expectedLiteral
@@ -116,6 +117,11 @@ func TestNextToken(t *testing.T) {
 		{token.INT, "9"},
 		{token.RBRACKET, "]"},
 		{token.SEMICOLON, ";"},
+		{token.LBRACE, "{"},
+		{token.STRING, "test"},
+		{token.COLON, ":"},
+		{token.STRING, "run"},
+		{token.RBRACE, "}"},
 		{token.EOF, ""},
 	}
 
