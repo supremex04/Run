@@ -1,34 +1,37 @@
-# Run
-This is an interpreter for self-made language **Run** in Go.
+# Run Language Interpreter
 
-Supports mathematical expressions, variable binding, functions, conditionals, return statements, higher order functions, closures and arrays.
+**Run** is an interpreter for a custom-made programming language, developed in Go. It supports various programming constructs such as mathematical expressions, variable binding, functions, conditionals, return statements, higher-order functions, closures, and arrays.
 
-**Supported Datatypes:** integers, booleans, strings, arrays and hash
+## Supported Datatypes
+- **Integers**
+- **Booleans**
+- **Strings**
+- **Arrays**
+- **Hashes**
 
+## Getting Started
 
-To run the interpreter:
-```
+To run the interpreter, follow these steps:
+
+```bash
 git clone https://github.com/supremex04/Run.git
-
+cd Run
 go run main.go
 ```
 
-Built in functions:
+## Built-in Functions
 
-```len():```To return the lenght of string, array
+The **Run** language includes the following built-in functions:
 
-```first():```To return first element of array
-
-```last():``` To return last element of array
-
-```rest():``` To display the rest elements
-
-```push():``` To append element into the array
-
-```display():``` To print on the screen
+- `len()`: Returns the length of a string or array.
+- `first()`: Returns the first element of an array.
+- `last()`: Returns the last element of an array.
+- `rest()`: Displays all elements of an array except the first.
+- `push()`: Appends an element to an array.
+- `display()`: Prints a value to the screen.
 
 
-Sample code to run:
+**Sample code to run:**
 
 ```
 let t = true;
@@ -40,9 +43,15 @@ let hw = ["Hello", " World in Run!"];
 display( hw[0] + hw[1] );
 ```
 
+
+## Screenshot
+
 ![Snapshot of the interpreter](./screenshot.png)
 
-Followed Thorsten Ball's book on writing interpreters.
+
+## Acknowledgments
+
+This project was done by following Thorsten Ball's book on writing interpreters.
 
 
 
