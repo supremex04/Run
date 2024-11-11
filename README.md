@@ -13,4 +13,21 @@ git clone https://github.com/supremex04/Run.git
 go run main.go
 ```
 
+Sample code to run:
+
+```
+let t = true;
+let f = false;
+let info = {"name": "Ram", "age": 999};
+let x = len(info["name"]);
+if (x > 2) {return t} else {return f};
+let hw = ["Hello", " World in Run!"];
+display( hw[0] + hw[1] );
+```
+
+![Snapshot of the interpreter](./screenshot.png)
+
 Followed Thorsten Ball's book on writing interpreters.
+
+
+
