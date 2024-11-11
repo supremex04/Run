@@ -1,4 +1,8 @@
 # Run
-This will be an interpreter for self-made language **Run** in Go.
+This is an interpreter for self-made language **Run** in Go.
 
-Following Thorsten Ball's book
+Supports mathematical expressions, variable binding, functions, conditionals, return statements, higher order functions, closures and arrays.
+
+**Datatypes:** integers, booleans, strings, arrays and hash
+
+Followed Thorsten Ball's book
